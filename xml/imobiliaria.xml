@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<imobiliaria>
+    <imovel>
+        <descricao>Texto</descricao>
+        <proprietario>
+            <nome>Jurandi</nome>
+            <email>jurandi@gmail.com</email>
+            <telefone>(84) 988651140</telefone>
+            <telefone>(84) 988651145</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua x</rua>
+            <bairro></bairro>
+            <cidade></cidade>
+            <numero></numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho></tamanho>
+            <numQuartos></numQuartos>
+            <numBanheiros></numBanheiros>
+        </caracteristicas>
+        <valor></valor>
+    </imovel>
+    <imovel>
+        <descricao>Texto</descricao>
+        <proprietario>
+            <nome>Jajaja</nome>
+            <email></email>
+            <telefone>(84) 988651144</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua x</rua>
+            <bairro></bairro>
+            <cidade></cidade>
+            <numero></numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho></tamanho>
+            <numQuartos></numQuartos>
+            <numBanheiros></numBanheiros>
+        </caracteristicas>
+        <valor></valor>
+    </imovel>
+    <imovel>
+        <descricao>Texto</descricao>
+        <proprietario>
+            <nome></nome>
+            <email></email>
+            <telefone></telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua x</rua>
+            <bairro></bairro>
+            <cidade></cidade>
+            <numero></numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho></tamanho>
+            <numQuartos></numQuartos>
+            <numBanheiros></numBanheiros>
+        </caracteristicas>
+        <valor></valor>
+    </imovel>
+    <imovel>
+        <descricao>Texto</descricao>
+        <proprietario>
+            <nome></nome>
+            <email></email>
+            <telefone></telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua x</rua>
+            <bairro></bairro>
+            <cidade></cidade>
+            <numero></numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho></tamanho>
+            <numQuartos></numQuartos>
+            <numBanheiros></numBanheiros>
+        </caracteristicas>
+        <valor></valor>
+    </imovel>
+    <imovel>
+        <descricao>Texto</descricao>
+        <proprietario>
+            <nome></nome>
+            <email></email>
+            <telefone></telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua x</rua>
+            <bairro></bairro>
+            <cidade></cidade>
+            <numero></numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho></tamanho>
+            <numQuartos></numQuartos>
+            <numBanheiros></numBanheiros>
+        </caracteristicas>
+        <valor></valor>
+    </imovel>
+</imobiliaria>
