@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE cardapio SYSTEM "definicoes.dtd">
 <cardapio>
-    <pratos>
-        <prato id="01"> 
+        <prato id="a01"> 
             <nome>Frango Frito</nome>
-            <descricao>
-                Um delicioso frango frito
-            </descricao>
+            <descricao>Um delicioso frango frito</descricao>
             <ingredientes>
-                - Frango
-                - Óleo
+                <ingrediente>óleo</ingrediente>
+                <ingrediente>ovo</ingrediente>
+                <ingrediente>frango</ingrediente>
             </ingredientes>
             <preco>
                 99,99$
@@ -20,18 +19,18 @@
                 1h
             </tempoPreparo>
         </prato>
-        <prato id="02">
+        <prato id="b02">
             <nome>Lasanha</nome>
             <descricao>
                 Uma deliciosa lasanha
             </descricao>
             <ingredientes>
-                - Massa
-                - Frango
-                - molho
+                <ingrediente>óleo</ingrediente>
+                <ingrediente>ovo</ingrediente>
+                <ingrediente>frango</ingrediente>
             </ingredientes>
             <preco>
-                40,99$
+                40,99 &reais;
             </preco>
             <calorias>
                 1000Kcal
@@ -40,18 +39,18 @@
                 2h
             </tempoPreparo>
         </prato>
-        <prato id="03">
+        <prato id="a03">
             <nome>Macarrão ao alho</nome>
             <descricao>
                 Macarrão cozido ao alho
             </descricao>
             <ingredientes>
-                - Macarrão
-                - Alho
-                - Água
+                <ingrediente>óleo</ingrediente>
+                <ingrediente>ovo</ingrediente>
+                <ingrediente>frango</ingrediente>
             </ingredientes>
             <preco>
-                41,99$
+                41,99&reais;
             </preco>
             <calorias>
                 90Kcal
@@ -60,15 +59,15 @@
                 1h20min
             </tempoPreparo>
         </prato>
-        <prato id="04">
+        <prato id="b04">
             <nome>Sopa</nome>
             <descricao>
                 Uma deliciosa sopa
             </descricao>
             <ingredientes>
-                - Macarrão
-                - Temperos
-                - Legumes
+                <ingrediente>óleo</ingrediente>
+                <ingrediente>ovo</ingrediente>
+                <ingrediente>frango</ingrediente>
             </ingredientes>
             <preco>
                 12$
@@ -80,18 +79,18 @@
                 2h
             </tempoPreparo>
         </prato>
-        <prato id="05">
+        <prato id="a05">
             <nome>Pão com ovo</nome>
             <descricao>
                 Um delicioso pão com ovo
             </descricao>
             <ingredientes>
-                - Pão
-                - ovo
-                - requeijão
+                <ingrediente>óleo</ingrediente>
+                <ingrediente>ovo</ingrediente>
+                <ingrediente>frango</ingrediente>
             </ingredientes>
             <preco>
-                30,89$
+                30,89&reais;
             </preco>
             <calorias>
                 20Kcal
@@ -100,5 +99,4 @@
                 20min
             </tempoPreparo>
         </prato>
-    </pratos>
 </cardapio>
