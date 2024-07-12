@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cardapio>
+    <pratos>
+        <prato id="01"> 
+            <nome>Frango Frito</nome>
+            <descricao>
+                Um delicioso frango frito
+            </descricao>
+            <ingredientes>
+                - Frango
+                - Óleo
+            </ingredientes>
+            <preco>
+                99,99$
+            </preco>
+            <calorias>
+                99Kcal
+            </calorias>
+            <tempoPreparo>
+                1h
+            </tempoPreparo>
+        </prato>
+        <prato id="02">
+            <nome>Lasanha</nome>
+            <descricao>
+                Uma deliciosa lasanha
+            </descricao>
+            <ingredientes>
+                - Massa
+                - Frango
+                - molho
+            </ingredientes>
+            <preco>
+                40,99$
+            </preco>
+            <calorias>
+                1000Kcal
+            </calorias>
+            <tempoPreparo>
+                2h
+            </tempoPreparo>
+        </prato>
+        <prato id="03">
+            <nome>Macarrão ao alho</nome>
+            <descricao>
+                Macarrão cozido ao alho
+            </descricao>
+            <ingredientes>
+                - Macarrão
+                - Alho
+                - Água
+            </ingredientes>
+            <preco>
+                41,99$
+            </preco>
+            <calorias>
+                90Kcal
+            </calorias>
+            <tempoPreparo>
+                1h20min
+            </tempoPreparo>
+        </prato>
+        <prato id="04">
+            <nome>Sopa</nome>
+            <descricao>
+                Uma deliciosa sopa
+            </descricao>
+            <ingredientes>
+                - Macarrão
+                - Temperos
+                - Legumes
+            </ingredientes>
+            <preco>
+                12$
+            </preco>
+            <calorias>
+                100Kcal
+            </calorias>
+            <tempoPreparo>
+                2h
+            </tempoPreparo>
+        </prato>
+        <prato id="05">
+            <nome>Pão com ovo</nome>
+            <descricao>
+                Um delicioso pão com ovo
+            </descricao>
+            <ingredientes>
+                - Pão
+                - ovo
+                - requeijão
+            </ingredientes>
+            <preco>
+                30,89$
+            </preco>
+            <calorias>
+                20Kcal
+            </calorias>
+            <tempoPreparo>
+                20min
+            </tempoPreparo>
+        </prato>
+    </pratos>
+</cardapio>
