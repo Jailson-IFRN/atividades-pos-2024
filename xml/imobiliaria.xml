@@ -2,7 +2,7 @@
 <!DOCTYPE imobiliaria [
 <!ELEMENT imobiliaria (imovel+)> 
 <!ELEMENT imovel (descricao, proprietario, endereco, caracteristicas , valor)> 
-<!ELEMENT proprietario (nome, email+, telefone+)> 
+<!ELEMENT proprietario (nome, (email|telefone)+) > 
 <!ELEMENT endereco (rua, bairro, cidade, numero?)> 
 <!ELEMENT caracteristicas  (tamanho, numQuartos, numBanheiros)> 
 <!ELEMENT descricao (#PCDATA)>
