@@ -1,1 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
+<quiz versao="2024">
+    <disciplina></disciplina>
+    <professor>
+        <nome>Jailson</nome>
+        <matrícula></matrícula>
+    </professor>
+    <turma></turma>
+    <data></data>
+    <questões>
+        <questão>
+            <enunciado></enunciado>
+            <pontuação></pontuação>
+            <alternativas>
+                <alternativa correta="sim">
+                    Opção1
+                </alternativa>
+                <alternativa correta="nao">
+                    Opção2
+                </alternativa>
+            </alternativas>
+        </questão>
+        <questão>
+            <enunciado></enunciado>
+            <pontuação></pontuação>
+            <alternativas>
+                <alternativa correta="sim">
+                    Opção1
+                </alternativa>
+                <alternativa correta="nao">
+                    Opção2
+                </alternativa>
+            </alternativas>
+        </questão>
+    </questões>
+</quiz>
