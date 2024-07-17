@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE imobiliaria [
+<!ELEMENT imobiliaria (imovel+)> 
+<!ELEMENT imovel (descricao, proprietario, endereco, caracteristicas , valor)> 
+<!ELEMENT proprietario (nome, email+, telefone+)> 
+<!ELEMENT endereco (rua, bairro, cidade, numero?)> 
+<!ELEMENT caracteristicas  (tamanho, numQuartos, numBanheiros)> 
+<!ELEMENT descricao (#PCDATA)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telefone (#PCDATA)>
+<!ELEMENT rua (#PCDATA)>
+<!ELEMENT bairro (#PCDATA)>
+<!ELEMENT cidade (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT tamanho (#PCDATA)>
+<!ELEMENT numQuartos (#PCDATA)>
+<!ELEMENT numBanheiros (#PCDATA)>
+<!ELEMENT valor (#PCDATA)>
+]>
 <imobiliaria>
     <imovel>
         <descricao>Texto</descricao>
@@ -10,95 +29,95 @@
         </proprietario>
         <endereco>
             <rua>Rua x</rua>
-            <bairro></bairro>
-            <cidade></cidade>
-            <numero></numero>
+            <bairro>Centro</bairro>
+            <cidade>Bom Jesus</cidade>
+            <numero>15</numero>
         </endereco>
         <caracteristicas>
-            <tamanho></tamanho>
-            <numQuartos></numQuartos>
-            <numBanheiros></numBanheiros>
+            <tamanho>1000</tamanho>
+            <numQuartos>4</numQuartos>
+            <numBanheiros>2</numBanheiros>
         </caracteristicas>
-        <valor></valor>
+        <valor>2500</valor>
     </imovel>
     <imovel>
         <descricao>Texto</descricao>
         <proprietario>
             <nome>Jajaja</nome>
-            <email></email>
+            <email>jgjg@gmail.com</email>
             <telefone>(84) 988651144</telefone>
         </proprietario>
         <endereco>
             <rua>Rua x</rua>
-            <bairro></bairro>
-            <cidade></cidade>
-            <numero></numero>
+            <bairro>Caixa da água</bairro>
+            <cidade>Natal</cidade>
+            <numero>18</numero>
         </endereco>
         <caracteristicas>
-            <tamanho></tamanho>
-            <numQuartos></numQuartos>
-            <numBanheiros></numBanheiros>
+            <tamanho>2000</tamanho>
+            <numQuartos>2</numQuartos>
+            <numBanheiros>4</numBanheiros>
         </caracteristicas>
-        <valor></valor>
+        <valor>2000</valor>
     </imovel>
     <imovel>
         <descricao>Texto</descricao>
         <proprietario>
-            <nome></nome>
-            <email></email>
-            <telefone></telefone>
+            <nome>JAjajaj</nome>
+            <email>jg094151@gmail.com</email>
+            <telefone>(84) 98865-1140</telefone>
         </proprietario>
         <endereco>
             <rua>Rua x</rua>
-            <bairro></bairro>
-            <cidade></cidade>
-            <numero></numero>
+            <bairro>Centro</bairro>
+            <cidade>Natal</cidade>
+            <numero>17</numero>
         </endereco>
         <caracteristicas>
-            <tamanho></tamanho>
-            <numQuartos></numQuartos>
-            <numBanheiros></numBanheiros>
+            <tamanho>1500</tamanho>
+            <numQuartos>1</numQuartos>
+            <numBanheiros>2</numBanheiros>
         </caracteristicas>
-        <valor></valor>
+        <valor>2000</valor>
     </imovel>
     <imovel>
         <descricao>Texto</descricao>
         <proprietario>
-            <nome></nome>
+            <nome>Jajajaj</nome>
             <email></email>
-            <telefone></telefone>
+            <telefone>(84) 988651140</telefone>
         </proprietario>
         <endereco>
             <rua>Rua x</rua>
-            <bairro></bairro>
-            <cidade></cidade>
-            <numero></numero>
+            <bairro>Centro</bairro>
+            <cidade>Bom Jesus</cidade>
+            <numero>121</numero>
         </endereco>
         <caracteristicas>
-            <tamanho></tamanho>
-            <numQuartos></numQuartos>
-            <numBanheiros></numBanheiros>
+            <tamanho>1200</tamanho>
+            <numQuartos>3</numQuartos>
+            <numBanheiros>2</numBanheiros>
         </caracteristicas>
-        <valor></valor>
+        <valor>2000</valor>
     </imovel>
     <imovel>
         <descricao>Texto</descricao>
         <proprietario>
-            <nome></nome>
-            <email></email>
-            <telefone></telefone>
+            <nome>Dadadda</nome>
+            <email>dada@gmail.com</email>
+            <telefone>(84) 98865-1144</telefone>
         </proprietario>
         <endereco>
             <rua>Rua x</rua>
-            <bairro></bairro>
-            <cidade></cidade>
-            <numero></numero>
+            <bairro>Centro</bairro>
+            <cidade>Fortaleza</cidade>
+            <numero>12</numero>
         </endereco>
         <caracteristicas>
-            <tamanho></tamanho>
-            <numQuartos></numQuartos>
-            <numBanheiros></numBanheiros>
+            <tamanho>1200</tamanho>
+            <numQuartos>2</numQuartos>
+            <numBanheiros>2</numBanheiros>
         </caracteristicas>
-        <valor></valor>
+        <valor>90000</valor>
     </imovel>
 </imobiliaria>
