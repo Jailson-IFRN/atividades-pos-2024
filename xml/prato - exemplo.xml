@@ -1,0 +1,12 @@
+<prato xmlns="http://pratos.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pratos.org xmlSchema.xsd" > 
+    
+    <nome>Lasanha</nome>
+    <refeição>almoço</refeição>
+    <ingredientes>
+        <ingrediente>Macarrão</ingrediente>
+        <ingrediente>Molho de tomate</ingrediente>
+    </ingredientes>
+    <preço>29.99</preço>
+    <dataCadastro>2024-01-20</dataCadastro>
+
+</prato>
