@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE imobiliaria [
-<!ELEMENT imobiliaria (imovel+)> 
-<!ELEMENT imovel (descricao, proprietario, endereco, caracteristicas , valor)> 
-<!ELEMENT proprietario (nome, (email|telefone)+) > 
-<!ELEMENT endereco (rua, bairro, cidade, numero?)> 
-<!ELEMENT caracteristicas  (tamanho, numQuartos, numBanheiros)> 
-<!ELEMENT descricao (#PCDATA)>
-<!ELEMENT nome (#PCDATA)>
-<!ELEMENT email (#PCDATA)>
-<!ELEMENT telefone (#PCDATA)>
-<!ELEMENT rua (#PCDATA)>
-<!ELEMENT bairro (#PCDATA)>
-<!ELEMENT cidade (#PCDATA)>
-<!ELEMENT numero (#PCDATA)>
-<!ELEMENT tamanho (#PCDATA)>
-<!ELEMENT numQuartos (#PCDATA)>
-<!ELEMENT numBanheiros (#PCDATA)>
-<!ELEMENT valor (#PCDATA)>
-]>
-<imobiliaria>
+
+<imobiliária xmlns="http://imobiliaria.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://imobiliaria.org imobiliaria.xsd">
     <imovel>
         <descricao>Texto</descricao>
         <proprietario>
@@ -31,7 +13,7 @@
             <rua>Rua x</rua>
             <bairro>Centro</bairro>
             <cidade>Bom Jesus</cidade>
-            <numero>15</numero>
+            <número>15</número>
         </endereco>
         <caracteristicas>
             <tamanho>1000</tamanho>
@@ -51,7 +33,7 @@
             <rua>Rua x</rua>
             <bairro>Caixa da água</bairro>
             <cidade>Natal</cidade>
-            <numero>18</numero>
+            <número>18</número>
         </endereco>
         <caracteristicas>
             <tamanho>2000</tamanho>
@@ -71,7 +53,7 @@
             <rua>Rua x</rua>
             <bairro>Centro</bairro>
             <cidade>Natal</cidade>
-            <numero>17</numero>
+            <número>17</número>
         </endereco>
         <caracteristicas>
             <tamanho>1500</tamanho>
@@ -91,7 +73,7 @@
             <rua>Rua x</rua>
             <bairro>Centro</bairro>
             <cidade>Bom Jesus</cidade>
-            <numero>121</numero>
+            <número>121</número>
         </endereco>
         <caracteristicas>
             <tamanho>1200</tamanho>
@@ -111,7 +93,7 @@
             <rua>Rua x</rua>
             <bairro>Centro</bairro>
             <cidade>Fortaleza</cidade>
-            <numero>12</numero>
+            <número>12</número>
         </endereco>
         <caracteristicas>
             <tamanho>1200</tamanho>
@@ -120,4 +102,4 @@
         </caracteristicas>
         <valor>90000</valor>
     </imovel>
-</imobiliaria>
+</imobiliária>
