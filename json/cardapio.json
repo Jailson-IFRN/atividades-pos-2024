@@ -1,0 +1,62 @@
+{
+    "cardapio": {
+      "prato": [
+        {
+          "id": "01",
+          "nome": "Frango Frito",
+          "descricao": "Um delicioso frango frito",
+          "ingredientes": {
+            "ingrediente": ["óleo", "ovo", "frango"]
+          },
+          "preco": 99.99,
+          "calorias": 99,
+          "tempoPreparo": "1h"
+        },
+        {
+          "id": "02",
+          "nome": "Lasanha",
+          "descricao": "Uma deliciosa lasanha",
+          "ingredientes": {
+            "ingrediente": ["óleo", "ovo", "frango"]
+          },
+          "preco": 40.99,
+          "calorias": 1000,
+          "tempoPreparo": "2h"
+        },
+        {
+          "id": "03",
+          "nome": "Macarrão ao alho",
+          "descricao": "Macarrão cozido ao alho",
+          "ingredientes": {
+            "ingrediente": ["óleo", "ovo", "frango"]
+          },
+          "preco": 41.99,
+          "calorias": 90,
+          "tempoPreparo": "1h20min"
+        },
+        {
+          "id": "04",
+          "nome": "Sopa",
+          "descricao": "Uma deliciosa sopa",
+          "ingredientes": {
+            "ingrediente": ["óleo", "ovo", "frango"]
+          },
+          "preco": 12,
+          "calorias": 100,
+          "tempoPreparo": "2h"
+        },
+        {
+          "id": "05",
+          "nome": "Pão com ovo",
+          "descricao": "Um delicioso pão com ovo",
+          "ingredientes": {
+            "ingrediente": ["óleo", "ovo", "frango"]
+          },
+          "preco": 30.89,
+          "calorias": 20,
+          "tempoPreparo": "20min"
+        }
+      ]
+    }
+  }
+  

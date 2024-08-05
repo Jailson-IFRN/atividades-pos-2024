@@ -1,0 +1,48 @@
+{
+    "quiz": {
+      "disciplina": "",
+      "professor": {
+        "nome": "Jailson",
+        "matricula": ""
+      },
+      "turma": "",
+      "data": "",
+      "questoes": {
+        "questao": [
+          {
+            "enunciado": "",
+            "pontuacao": "",
+            "alternativas": {
+              "alternativa": [
+                {
+                  "correta": "sim",
+                  "texto": "Opção1"
+                },
+                {
+                  "correta": "nao",
+                  "texto": "Opção2"
+                }
+              ]
+            }
+          },
+          {
+            "enunciado": "",
+            "pontuacao": "",
+            "alternativas": {
+              "alternativa": [
+                {
+                  "correta": "sim",
+                  "texto": "Opção1"
+                },
+                {
+                  "correta": "nao",
+                  "texto": "Opção2"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+  
