@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<imobiliária xmlns="http://imobiliaria.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://imobiliaria.org imobiliaria.xsd">
+    <imovel>
+        <descricao>Texto</descricao>
+        <proprietario>
+            <nome>Jurandi</nome>
+            <email>jurandi@gmail.com</email>
+            <telefone>(84) 988651140</telefone>
+            <telefone>(84) 988651145</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua x</rua>
+            <bairro>Centro</bairro>
+            <cidade>Bom Jesus</cidade>
+            <número>15</número>
+        </endereco>
+        <caracteristicas>
+            <tamanho>1000</tamanho>
+            <numQuartos>4</numQuartos>
+            <numBanheiros>2</numBanheiros>
+        </caracteristicas>
+        <valor>2500</valor>
+    </imovel>
+    <imovel>
+        <descricao>Texto</descricao>
+        <proprietario>
+            <nome>Jajaja</nome>
+            <email>jgjg@gmail.com</email>
+            <telefone>(84) 988651144</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua x</rua>
+            <bairro>Caixa da água</bairro>
+            <cidade>Natal</cidade>
+            <número>18</número>
+        </endereco>
+        <caracteristicas>
+            <tamanho>2000</tamanho>
+            <numQuartos>2</numQuartos>
+            <numBanheiros>4</numBanheiros>
+        </caracteristicas>
+        <valor>2000</valor>
+    </imovel>
+    <imovel>
+        <descricao>Texto</descricao>
+        <proprietario>
+            <nome>JAjajaj</nome>
+            <email>jg094151@gmail.com</email>
+            <telefone>(84) 98865-1140</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua x</rua>
+            <bairro>Centro</bairro>
+            <cidade>Natal</cidade>
+            <número>17</número>
+        </endereco>
+        <caracteristicas>
+            <tamanho>1500</tamanho>
+            <numQuartos>1</numQuartos>
+            <numBanheiros>2</numBanheiros>
+        </caracteristicas>
+        <valor>2000</valor>
+    </imovel>
+    <imovel>
+        <descricao>Texto</descricao>
+        <proprietario>
+            <nome>Jajajaj</nome>
+            <email></email>
+            <telefone>(84) 988651140</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua x</rua>
+            <bairro>Centro</bairro>
+            <cidade>Bom Jesus</cidade>
+            <número>121</número>
+        </endereco>
+        <caracteristicas>
+            <tamanho>1200</tamanho>
+            <numQuartos>3</numQuartos>
+            <numBanheiros>2</numBanheiros>
+        </caracteristicas>
+        <valor>2000</valor>
+    </imovel>
+    <imovel>
+        <descricao>Texto</descricao>
+        <proprietario>
+            <nome>Dadadda</nome>
+            <email>dada@gmail.com</email>
+            <telefone>(84) 98865-1144</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua x</rua>
+            <bairro>Centro</bairro>
+            <cidade>Fortaleza</cidade>
+            <número>12</número>
+        </endereco>
+        <caracteristicas>
+            <tamanho>1200</tamanho>
+            <numQuartos>2</numQuartos>
+            <numBanheiros>2</numBanheiros>
+        </caracteristicas>
+        <valor>90000</valor>
+    </imovel>
+</imobiliária>
