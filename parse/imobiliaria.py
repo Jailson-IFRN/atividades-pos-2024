@@ -3,72 +3,53 @@ import json
 
 
 imobiliaria = parse("imobiliaria.xml")
-
-
 vari = imobiliaria.documentElement
-
-
 imoveis = vari.getElementsByTagName('imovel')
 
-
 data_imobiliaria = []
-data_proprietario = {}
-emails ={}
-telefones = {}
-endereco2 = {}
-caracteristicas2 = {}
-descricao = {}
-valor = {}
+
 for i in imoveis:
-    descricao1 = i.getElementsByTagName("descricao")[0].firstChild.nodeValue
-    descricao["descricao"] = descricao1
-    valor1 = i.getElementsByTagName("valor")[0].firstChild.nodeValue
-    valor["valor"] = valor1
-    data_imobiliaria.append(descricao)
-    data_imobiliaria.append(valor)
-    elemento_proprietario = i.getElementsByTagName("proprietario")
-    for j in elemento_proprietario:
-        nome = j.getElementsByTagName("nome")[0].firstChild.nodeValue
-        email = j.getElementsByTagName("email")
-        data_proprietario["nome"] = nome
-        for k in email:
-            print(k.firstChild.nodeValue)
-            emails["emails"] = k
-            
-            data_proprietario["email"] = emails
-            
-        telefone = j.getElementsByTagName("telefone")[0].firstChild.nodeValue
-        for h in telefone:
-            
-            telefones["telefone"] = h
-            data_proprietario["telefone"] = telefones
-
-    data_imobiliaria.append(data_proprietario)
-    endereco = i.getElementsByTagName("endereco")
-    for a in endereco:
-        rua = a.getElementsByTagName("rua")[0].firstChild.nodeValue
-        bairro = a.getElementsByTagName("bairro")[0].firstChild.nodeValue
-        cidade = a.getElementsByTagName("cidade")[0].firstChild
-        numero = a.getElementsByTagName("número")[0].firstChild
-        endereco2["rua"] = rua
-        endereco2["bairro"] = bairro
-        endereco2["cidade"] = cidade
-        endereco2["numero"] = numero
+    imovel_data = {}
     
-    data_imobiliaria.append(endereco)
-    caracteristicas = i.getElementsByTagName("caracteristicas")
-    for b in caracteristicas:
-        tamanho = b.getElementsByTagName("tamanho")[0].firstChild.nodeValue
-        numQuartos = b.getElementsByTagName("numQuartos")[0].firstChild.nodeValue
-        numBanheiros = b.getElementsByTagName("numBanheiros")[0].firstChild.nodeValue
-        caracteristicas2["tamanho"] = tamanho
-        caracteristicas2["numQuartos"] = numQuartos
-        caracteristicas2["numBanheiros"] = numBanheiros
-    data_imobiliaria.append(caracteristicas2)
+    descricao = i.getElementsByTagName("descricao")[0].firstChild.nodeValue
+    imovel_data["descricao"] = descricao
+    
+    valor = i.getElementsByTagName("valor")[0].firstChild.nodeValue
+    imovel_data["valor"] = valor
+    
+    proprietario = i.getElementsByTagName("proprietario")[0]
+    proprietario_data = {
+        "nome": proprietario.getElementsByTagName("nome")[0].firstChild.nodeValue,
+        "email": proprietario.getElementsByTagName("email")[0].firstChild.nodeValue if proprietario.getElementsByTagName("email")[0].firstChild else "",
+        "telefones": [telefone.firstChild.nodeValue for telefone in proprietario.getElementsByTagName("telefone")]
+    }
+    imovel_data["proprietario"] = proprietario_data
+    
+    endereco = i.getElementsByTagName("endereco")[0]
+    endereco_data = {
+        "rua": endereco.getElementsByTagName("rua")[0].firstChild.nodeValue,
+        "bairro": endereco.getElementsByTagName("bairro")[0].firstChild.nodeValue,
+        "cidade": endereco.getElementsByTagName("cidade")[0].firstChild.nodeValue,
+        "numero": endereco.getElementsByTagName("número")[0].firstChild.nodeValue
+    }
+    imovel_data["endereco"] = endereco_data
+    
+    caracteristicas = i.getElementsByTagName("caracteristicas")[0]
+    caracteristicas_data = {
+        "tamanho": caracteristicas.getElementsByTagName("tamanho")[0].firstChild.nodeValue,
+        "numQuartos": caracteristicas.getElementsByTagName("numQuartos")[0].firstChild.nodeValue,
+        "numBanheiros": caracteristicas.getElementsByTagName("numBanheiros")[0].firstChild.nodeValue
+    }
+    imovel_data["caracteristicas"] = caracteristicas_data
+    
+    data_imobiliaria.append(imovel_data)
 
-#with open("biblioteca.json", "w") as json_file:
-#    json.dump(data_imobiliaria, json_file, indent=2)
-print(data_imobiliaria)    
+
+with open("imobiliaria.json", "w", encoding="utf-8") as json_file:
+    json.dump(data_imobiliaria, json_file, ensure_ascii=False, indent=2)
+
+print(json.dumps(data_imobiliaria, ensure_ascii=False, indent=2))
+ 
 
  
 

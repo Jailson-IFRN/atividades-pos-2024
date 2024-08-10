@@ -1,0 +1,113 @@
+[
+  {
+    "descricao": "Texto",
+    "valor": "2500",
+    "proprietario": {
+      "nome": "Jurandi",
+      "email": "jurandi@gmail.com",
+      "telefones": [
+        "(84) 988651140",
+        "(84) 988651145"
+      ]
+    },
+    "endereco": {
+      "rua": "Rua x",
+      "bairro": "Centro",
+      "cidade": "Bom Jesus",
+      "numero": "15"
+    },
+    "caracteristicas": {
+      "tamanho": "1000",
+      "numQuartos": "4",
+      "numBanheiros": "2"
+    }
+  },
+  {
+    "descricao": "Texto",
+    "valor": "2000",
+    "proprietario": {
+      "nome": "Jajaja",
+      "email": "jgjg@gmail.com",
+      "telefones": [
+        "(84) 988651144"
+      ]
+    },
+    "endereco": {
+      "rua": "Rua x",
+      "bairro": "Caixa da água",
+      "cidade": "Natal",
+      "numero": "18"
+    },
+    "caracteristicas": {
+      "tamanho": "2000",
+      "numQuartos": "2",
+      "numBanheiros": "4"
+    }
+  },
+  {
+    "descricao": "Texto",
+    "valor": "2000",
+    "proprietario": {
+      "nome": "JAjajaj",
+      "email": "jg094151@gmail.com",
+      "telefones": [
+        "(84) 98865-1140"
+      ]
+    },
+    "endereco": {
+      "rua": "Rua x",
+      "bairro": "Centro",
+      "cidade": "Natal",
+      "numero": "17"
+    },
+    "caracteristicas": {
+      "tamanho": "1500",
+      "numQuartos": "1",
+      "numBanheiros": "2"
+    }
+  },
+  {
+    "descricao": "Texto",
+    "valor": "2000",
+    "proprietario": {
+      "nome": "Jajajaj",
+      "email": "",
+      "telefones": [
+        "(84) 988651140"
+      ]
+    },
+    "endereco": {
+      "rua": "Rua x",
+      "bairro": "Centro",
+      "cidade": "Bom Jesus",
+      "numero": "121"
+    },
+    "caracteristicas": {
+      "tamanho": "1200",
+      "numQuartos": "3",
+      "numBanheiros": "2"
+    }
+  },
+  {
+    "descricao": "Texto",
+    "valor": "90000",
+    "proprietario": {
+      "nome": "Dadadda",
+      "email": "dada@gmail.com",
+      "telefones": [
+        "(84) 98865-1144"
+      ]
+    },
+    "endereco": {
+      "rua": "Rua x",
+      "bairro": "Centro",
+      "cidade": "Fortaleza",
+      "numero": "12"
+    },
+    "caracteristicas": {
+      "tamanho": "1200",
+      "numQuartos": "2",
+      "numBanheiros": "2"
+    }
+  }
+]
