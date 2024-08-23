@@ -2,7 +2,7 @@ import requests
 from requests.auth import HTTPBasicAuth
 
 
-password = "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"
+password = "chave"
 user = "Jailson-IFRN"
 
 print("Digite 1 para seguir o usuário")
