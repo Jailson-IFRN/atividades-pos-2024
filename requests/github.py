@@ -1,8 +1,8 @@
 import requests
 from requests.auth import HTTPBasicAuth
+from getpass import getpass
 
-
-password = "chave"
+password = getpass()
 user = "Jailson-IFRN"
 
 print("Digite 1 para seguir o usuário")
