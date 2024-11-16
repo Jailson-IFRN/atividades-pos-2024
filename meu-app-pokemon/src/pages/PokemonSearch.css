@@ -1,0 +1,68 @@
+.search-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .search-container input {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #e63946;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  
+  .search-container button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e63946;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-container button:hover {
+    background-color: #ff5c5c;
+  }
+  
+  .error {
+    color: red;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  
+  .card {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .card h2 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .card p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #666;
+  }
+  

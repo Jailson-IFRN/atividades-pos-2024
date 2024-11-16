@@ -1,0 +1,23 @@
+/* Home.css */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://c4.wallpaperflare.com/wallpaper/469/441/292/space-night-sky-galaxy-hd-wallpaper-preview.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .rayquaza-3d {
+    width: 600px; 
+    height: 6000px; 
+    transform-style: preserve-3d;
+  
+  }
+  
+  .rayquaza-3d img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
