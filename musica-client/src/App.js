@@ -4,28 +4,53 @@ import { api } from './api/apiWrapper.js';
 export default function ArtistaList() {
   const [artistas, setArtistas] = useState([]);
   const [novoArtista, setNovoArtista] = useState({ nome: '', local: '', ano_criacao: '' });
+  const [erro, setErro] = useState(null);
 
-  // Carregar a lista de artistas
+  // Função auxiliar para carregar os artistas com tratamento de erros
+  const carregarArtistas = () => {
+    api.getArtistas()
+      .then(setArtistas)
+      .catch((err) => {
+        console.error('Erro ao carregar artistas:', err);
+        setErro('Não foi possível carregar a lista de artistas.');
+      });
+  };
+
+  // Carregar a lista de artistas ao montar o componente
   useEffect(() => {
-    api.getArtistas().then(setArtistas);
+    carregarArtistas();
   }, []);
 
   // Criar novo artista
   const handleCreate = () => {
-    api.createArtista(novoArtista).then(() => {
-      api.getArtistas().then(setArtistas); // Recarrega os artistas
-      setNovoArtista({ nome: '', local: '', ano_criacao: '' }); // Limpa o formulário
-    });
+    api.createArtista(novoArtista)
+      .then(() => {
+        carregarArtistas(); // Recarrega os artistas
+        setNovoArtista({ nome: '', local: '', ano_criacao: '' }); // Limpa o formulário
+      })
+      .catch((err) => {
+        console.error('Erro ao criar artista:', err);
+        setErro('Não foi possível criar o artista. Verifique os dados e tente novamente.');
+      });
   };
 
   // Excluir artista
   const handleDelete = (id) => {
-    api.deleteArtista(id).then(() => api.getArtistas().then(setArtistas));
+    api.deleteArtista(id)
+      .then(() => carregarArtistas()) // Recarrega os artistas
+      .catch((err) => {
+        console.error(`Erro ao excluir artista com id ${id}:`, err);
+        setErro('Não foi possível excluir o artista. Tente novamente.');
+      });
   };
 
   return (
     <div>
       <h1>Artistas</h1>
+    
+      {erro && <p style={{ color: 'red' }}>{erro}</p>}
+
+     
       <ul>
         {artistas.map((artista) => (
           <li key={artista.id}>
@@ -34,6 +59,8 @@ export default function ArtistaList() {
           </li>
         ))}
       </ul>
+
+     
       <h2>Criar Novo Artista</h2>
       <input
         type="text"
