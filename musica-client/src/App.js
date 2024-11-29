@@ -1,22 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { api } from './api/apiWrapper.js';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-import AlbumList from './AlbumList';
-
-export default function App() {
-  return (
-    <Router>
-      <Routes>
-        {/*<Route path="/artistas" element={<ArtistaList />} />*/}
-        <Route path="/albuns" element={<AlbumList />} />
-        {/* Adicione outras rotas aqui */}
-      </Routes>
-    </Router>
-  );
-}
-
-
 
 export default function ArtistaList() {
   const [artistas, setArtistas] = useState([]);
