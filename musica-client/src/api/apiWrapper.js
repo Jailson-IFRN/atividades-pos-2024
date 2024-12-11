@@ -11,19 +11,9 @@ export const api = {
       })
       .catch(err => {
         console.error(err);
-        throw err; // Repassa o erro para o chamador lidar
+        throw err; 
       }),
 
-  getArtista: async (id) => 
-    fetch(`${BASE_URL}/artistas/${id}/`)
-      .then(res => {
-        if (!res.ok) throw new Error(`Erro ao buscar artista com id ${id}: ${res.status}`);
-        return res.json();
-      })
-      .catch(err => {
-        console.error(err);
-        throw err;
-      }),
 
   createArtista: async (data) => 
     fetch(`${BASE_URL}/artistas/`, {
@@ -94,6 +84,20 @@ export const api = {
         console.error(err);
         throw err;
       }),
+      updateAlbum: async (id, data) => 
+        fetch(`${BASE_URL}/albuns/${id}/`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        })
+          .then(res => {
+            if (!res.ok) throw new Error(`Erro ao atualizar artista com id ${id}: ${res.status}`);
+            return res.json();
+          })
+          .catch(err => {
+            console.error(err);
+            throw err;
+          }),
 
   deleteAlbum: async (id) =>
     fetch(`${BASE_URL}/albuns/${id}/`, {
@@ -134,6 +138,21 @@ export const api = {
         console.error(err);
         throw err;
       }),
+
+      updateMusica: async (id, data) => 
+        fetch(`${BASE_URL}/musicas/${id}/`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        })
+          .then(res => {
+            if (!res.ok) throw new Error(`Erro ao atualizar artista com id ${id}: ${res.status}`);
+            return res.json();
+          })
+          .catch(err => {
+            console.error(err);
+            throw err;
+          }),
 
   deleteMusica: async (id) =>
     fetch(`${BASE_URL}/musicas/${id}/`, {

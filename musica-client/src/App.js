@@ -6,36 +6,78 @@ export default function App() {
   const [albuns, setAlbuns] = useState([]);
   const [musicas, setMusicas] = useState([]);
 
-  const [novoArtista, setNovoArtista] = useState({ nome: '' });
+  const [novoArtista, setNovoArtista] = useState({ nome: '', local:'', ano_criacao:'' });
   const [novoAlbum, setNovoAlbum] = useState({ nome: '', ano: '', artista: '' });
   const [novaMusica, setNovaMusica] = useState({ nome: '', segundos: '', album: '' });
 
+  const [editandoArtista, setEditandoArtista] = useState(null);
+  const [editandoAlbum, setEditandoAlbum] = useState(null);
+  const [editandoMusica, setEditandoMusica] = useState(null);
+
   useEffect(() => {
-    // Carregar dados iniciais do backend
+    // trazer do banco do servic
     api.getArtistas().then(setArtistas);
     api.getAlbuns().then(setAlbuns);
     api.getMusicas().then(setMusicas);
   }, []);
 
-  // Handlers para criar entidades
-  const handleCreateArtista = () => {
-    api.createArtista(novoArtista).then(() => {
+  const handleCreateOrUpdateArtista = () => {
+    if (editandoArtista) {
+      api.updateArtista(editandoArtista.id, novoArtista).then(() => {
+        api.getArtistas().then(setArtistas);
+        setNovoArtista({ nome: '', local: '', ano_criacao: '' });
+        setEditandoArtista(null);
+      }).catch(err => console.error(err));
+    } else {
+      api.createArtista(novoArtista).then(() => {
+        api.getArtistas().then(setArtistas);
+        setNovoArtista({ nome: '', local: '', ano_criacao: '' });
+      }).catch(err => console.error(err));
+    }
+  };
+  const handleDeleteArtista = (id) => {
+    api.deleteArtista(id).then(() => {
       api.getArtistas().then(setArtistas);
-      setNovoArtista({ nome: '' });
     }).catch(err => console.error(err));
   };
 
-  const handleCreateAlbum = () => {
-    api.createAlbum(novoAlbum).then(() => {
+  const handleCreateOrUpdateAlbum = () => {
+    if (editandoAlbum) {
+      api.updateAlbum(editandoAlbum.id, novoAlbum).then(() => {
+        api.getAlbuns().then(setAlbuns);
+        setNovoAlbum({ nome: '', ano: '', artista: '' });
+        setEditandoAlbum(null);
+      }).catch(err => console.error(err));
+    } else {
+      api.createAlbum(novoAlbum).then(() => {
+        api.getAlbuns().then(setAlbuns);
+        setNovoAlbum({ nome: '', ano: '', artista: '' });
+      }).catch(err => console.error(err));
+    }
+  };
+  const handleDeleteAlbum = (id) => {
+    api.deleteAlbum(id).then(() => {
       api.getAlbuns().then(setAlbuns);
-      setNovoAlbum({ nome: '', ano: '', artista: '' });
     }).catch(err => console.error(err));
   };
 
-  const handleCreateMusica = () => {
-    api.createMusica(novaMusica).then(() => {
+  const handleCreateOrUpdateMusica = () => {
+    if (editandoMusica) {
+      api.updateMusica(editandoMusica.id, novaMusica).then(() => {
+        api.getMusicas().then(setMusicas);
+        setNovaMusica({ nome: '', segundos: '', album: '' });
+        setEditandoMusica(null);
+      }).catch(err => console.error(err));
+    } else {
+      api.createMusica(novaMusica).then(() => {
+        api.getMusicas().then(setMusicas);
+        setNovaMusica({ nome: '', segundos: '', album: '' });
+      }).catch(err => console.error(err));
+    }
+  };
+  const handleDeleteMusica = (id) => {
+    api.deleteMusica(id).then(() => {
       api.getMusicas().then(setMusicas);
-      setNovaMusica({ nome: '', segundos: '', album: '' });
     }).catch(err => console.error(err));
   };
 
@@ -43,36 +85,62 @@ export default function App() {
     <div>
       <h1>Gestão de Música</h1>
 
-      {/* Lista e CRUD de Artistas */}
+    
       <section>
         <h2>Artistas</h2>
         <ul>
           {artistas.map(artista => (
-            <li key={artista.id}>{artista.nome}</li>
+            <li key={artista.id}>
+              {artista.nome} - {artista.local} - {artista.ano_criacao}
+              <button onClick={() => {
+                setNovoArtista(artista);
+                setEditandoArtista(artista);
+              }}>Editar</button>
+              <button onClick={() => handleDeleteArtista(artista.id)}>Excluir</button>
+            </li>
           ))}
         </ul>
         <div>
-          <h3>Criar Novo Artista</h3>
+          <h3>{editandoArtista ? 'Editar Artista' : 'Criar Novo Artista'}</h3>
           <input
             type="text"
             placeholder="Nome do Artista"
             value={novoArtista.nome}
             onChange={e => setNovoArtista({ ...novoArtista, nome: e.target.value })}
           />
-          <button onClick={handleCreateArtista}>Criar Artista</button>
+          <input
+            type="text"
+            placeholder="Local"
+            value={novoArtista.local}
+            onChange={e => setNovoArtista({ ...novoArtista, local: e.target.value })}
+          />
+          <input
+            type="text"
+            placeholder="Ano Criação"
+            value={novoArtista.ano_criacao}
+            onChange={e => setNovoArtista({ ...novoArtista, ano_criacao: e.target.value })}
+          />
+          <button onClick={handleCreateOrUpdateArtista}>{editandoArtista ? 'Salvar Alterações' : 'Criar Artista'}</button>
         </div>
       </section>
 
-      {/* Lista e CRUD de Álbuns */}
+      
       <section>
         <h2>Álbuns</h2>
         <ul>
           {albuns.map(album => (
-            <li key={album.id}>{album.nome} - {album.ano}</li>
+            <li key={album.id}>
+              {album.nome} - {album.ano} - {album.artista}
+              <button onClick={() => {
+                setNovoAlbum(album);
+                setEditandoAlbum(album);
+              }}>Editar</button>
+              <button onClick={() => handleDeleteAlbum(album.id)}>Excluir</button>
+            </li>
           ))}
         </ul>
         <div>
-          <h3>Criar Novo Álbum</h3>
+          <h3>{editandoAlbum ? 'Editar Álbum' : 'Criar Novo Álbum'}</h3>
           <input
             type="text"
             placeholder="Nome do Álbum"
@@ -96,20 +164,27 @@ export default function App() {
               </option>
             ))}
           </select>
-          <button onClick={handleCreateAlbum}>Criar Álbum</button>
+          <button onClick={handleCreateOrUpdateAlbum}>{editandoAlbum ? 'Salvar Alterações' : 'Criar Álbum'}</button>
         </div>
       </section>
 
-      {/* Lista e CRUD de Músicas */}
       <section>
         <h2>Músicas</h2>
         <ul>
           {musicas.map(musica => (
-            <li key={musica.id}>{musica.nome} - {musica.segundos}s</li>
+            <li key={musica.id}>
+              {musica.nome} - {musica.segundos}s
+              <button onClick={() => {
+                setNovaMusica(musica);
+                setEditandoMusica(musica);
+              }}>Editar</button>
+              
+              <button onClick={() => handleDeleteMusica(musica.id)}>Excluir</button>
+            </li>
           ))}
         </ul>
         <div>
-          <h3>Criar Nova Música</h3>
+          <h3>{editandoMusica ? 'Editar Música' : 'Criar Nova Música'}</h3>
           <input
             type="text"
             placeholder="Nome da Música"
@@ -126,14 +201,14 @@ export default function App() {
             value={novaMusica.album}
             onChange={e => setNovaMusica({ ...novaMusica, album: e.target.value })}
           >
-            <option value="">Selecione um Álbum</option>
-            {albuns.map(album => (
-              <option key={album.id} value={album.id}>
-                {album.nome}
+            <option value="">Selecione um Album</option>
+            {albuns.map(albuns => (
+              <option key={albuns.id} value={albuns.id}>
+                {albuns.nome}
               </option>
             ))}
           </select>
-          <button onClick={handleCreateMusica}>Criar Música</button>
+          <button onClick={handleCreateOrUpdateMusica}>{editandoMusica ? 'Salvar Alterações' : 'Criar Música'}</button>
         </div>
       </section>
     </div>
